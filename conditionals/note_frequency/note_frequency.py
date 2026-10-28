@@ -1,17 +1,22 @@
-a=int(input())
-if a>= 261.63 and a<293.66 :
-    print("C4")
-elif  a>=293.66  and  a<329.63   :
-    print("D4")
-elif  a>=329.63  and  a<349.23   :
-    print("E4")
-elif  a>=349.23  and  a<392.00   :
-    print("F4")
-elif  a>=392.00  and  a<440.00   :
-    print("G4")
-elif  a>=440.00  and  a<493.88   :
-    print("A4")
-elif  a==493.88   :
-    print("B4")
-else :
+a = input().upper()
+if len(a) == 2 and a[0] in "CDEFGAB" and a[1].isdigit():
+    note = a[0]
+    octave = int(a[1])
+    if note == "C":
+        freq = 261.63
+    elif note == "D":
+        freq = 293.66
+    elif note == "E":
+        freq = 329.63
+    elif note == "F":
+        freq = 349.23
+    elif note == "G":
+        freq = 392.00
+    elif note == "A":
+        freq = 440.00
+    elif note == "B":
+        freq = 493.88
+    freq = freq / (2 ** (4 - octave))
+    print(f"{freq:.2f}")
+else:
     print("Invalid note")

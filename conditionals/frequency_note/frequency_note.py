@@ -1,17 +1,18 @@
-a=int(input())
-if a>= 261.63 and a<293.66 :
+a = float(input())
+
+if abs(a - 261.63) <= 1:
     print("C4")
-elif  a>=293.66  and  a<329.63   :
+elif abs(a - 293.66) <= 1:
     print("D4")
-elif  a>=329.63  and  a<349.23   :
+elif abs(a - 329.63) <= 1:
     print("E4")
-elif  a>=349.23  and  a<392.00   :
+elif abs(a - 349.23) <= 1:
     print("F4")
-elif  a>=392.00  and  a<440.00   :
+elif abs(a - 392.00) <= 1:
     print("G4")
-elif  a>=440.00  and  a<493.88   :
+elif abs(a - 440.00) <= 1:
     print("A4")
-elif  a==493.88   :
+elif abs(a - 493.88) <= 1:
     print("B4")
-else :
+else:
     print("No match")

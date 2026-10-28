@@ -1,5 +1,3 @@
-a = int(input())
-
 money = {
     1: "Mirzo Tursunzoda",
     3: "Shirinsho Shotemur",
@@ -9,9 +7,16 @@ money = {
     50: "Bobojon Gafurov",
     100: "Ismoili Somoni",
     200: "Nusratullo Makhsum",
-    500: "Abuabdullo Rudaki",
+    500: "Abuabdullo Rudaki"
 }
-if a in money :
-  print(money(a))
-else :
-  print("Invalid denomination")
+
+a = input()
+
+if a.isdigit():
+    a = int(a)
+    if a in money:
+        print(money[a])
+    else:
+        print("Invalid denomination")
+else:
+    print("Invalid denomination")

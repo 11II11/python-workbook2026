@@ -9,4 +9,4 @@ for i in range(2, 30, 2):
     else:
         pi = pi - 4 / (i * (i + 1) * (i + 2))
         print(pi)
-        f = 1
+        f= 10000
